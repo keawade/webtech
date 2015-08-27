@@ -1,0 +1,23 @@
+{
+  "name": "webtech",
+  "version": "1.0.0",
+  "description": "This repo is for the Advanced Web Tech class at Union College.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keawade/webtech.git"
+  },
+  "author": "Keith Wade",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keawade/webtech/issues"
+  },
+  "homepage": "https://github.com/keawade/webtech",
+  "dependencies": {
+    "express": "^4.13.3",
+    "hbs": "^3.1.0"
+  }
+}
