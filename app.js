@@ -10,7 +10,7 @@ app.engine('html', hbs.__express);
 
 app.get('/', function(req, res, next) {
     res.render('index', {
-        title: 'Hello!'
+        title: 'Title!'
     });
 });
 
