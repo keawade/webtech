@@ -18,6 +18,7 @@
   "homepage": "https://github.com/keawade/webtech",
   "dependencies": {
     "express": "^4.13.3",
-    "hbs": "^3.1.0"
+    "hbs": "^3.1.0",
+    "hbs-utils": "0.0.3"
   }
 }
