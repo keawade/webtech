@@ -1,3 +1,51 @@
+var App = React.createClass({
+    getInitialState:function(){
+        return {
+            c: 0,
+            f: 32
+        };
+    },
+    temperature: {
+      toFahrenheit: function(c){
+        var f = c * 9;
+        f = f / 5;
+        f = f + 32;
+        return Math.round(f * 10) / 10;
+      },
+      toCelsius: function(f){
+        var c = f - 32;
+        c = c / 9;
+        c = c * 5;
+        return Math.round(c * 100) / 100;
+      },
+      fromKelvin: function(k){
+        var c = k + 273.15;
+        return c;
+      }
+    },
+    updateC: function(e){
+        this.setState({c: this.temperature.toCelsius(e.target.value)});
+    },
+    updateF: function(e){
+        this.setState({f: this.temperature.toFahrenheit(e.target.value)});
+    },
+    render:function(){
+        return (
+            <div>
+                <h1>Temperature</h1>
+                <div className="col-md-3">
+                    <input className="form-control" type="number" placeholder="Celsius" onChange={this.updateF}></input>
+                    <input className="form-control" type="number" placeholder="Fahrenheit" onChange={this.updateC}></input>
+                    <p>Temp in Celsius: {this.state.c}</p>
+                    <p>Temp in Fahrenheit: {this.state.f}</p>
+                </div>
+            </div>
+            );
+    }
+});
+
+React.render(<App />, document.getElementById('temperature'));
+
 /*
 Ex3: Temperature.js
 Create a file called "temperature.js", which does the following: 
@@ -15,7 +63,6 @@ should be calculated by calling the `toFahrenheit` function property on
 `Temperature`, passing it `tempToday`. Round the result by using the `Math.round()`
 function.
 4. Creates a new variable, `message`, and sets its value equal to a string that
-is in this form: “Today's temperature is <tempToday>°F, which is 
-<tempInCelsius> °C.”
+is in this form: “Today's temperature is <tempToday>°F, which is <tempInCelsius> °C.”
 5. Logs `message` to the console.
 */

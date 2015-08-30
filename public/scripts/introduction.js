@@ -1,11 +1,3 @@
-//var name = prompt('What is your name? ');
-//var age = prompt('What is your age? ');
-//var major = prompt('What is your major? ');
-//var classYears = ['Freshmen', 'Sophomore', 'Junior', 'Senior'];
-//var message = "Hello! My name is " + name + ". I'm " + age + " years old, and I am a " + classYears + " " + major + " major at Union College.";
-
-//console.log(message);
-
 var App = React.createClass({
     getInitialState:function(){
         return {
@@ -43,7 +35,7 @@ var App = React.createClass({
     }
 });
 
-React.render(<App />, document.getElementById('example'));
+React.render(<App />, document.getElementById('introduction'));
 
 /*
 Ex1: Introduction.js
