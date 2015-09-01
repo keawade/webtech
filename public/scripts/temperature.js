@@ -1,5 +1,5 @@
 var App = React.createClass({
-    getInitialState:function(){
+    getInitialState: function(){
         return {
             c: 0,
             f: 32
