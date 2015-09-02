@@ -2,25 +2,23 @@ var App = React.createClass({
     getInitialState:function(){
         return {
             value: 1,
-            text: 1
+            text: 0
         };
     },
     fizzbuzz:function(){
         if ( ( ( this.state.value % 3 ) == 0 ) && ( ( this.state.value % 5 ) == 0 ) ) {
             this.setState({value: this.state.value + 1});
-            this.setState({text: "Fizzbuzz"});
+            this.setState({text: "Fizzbuzz!"});
         } else if ( ( this.state.value % 3 ) == 0 ) {
             this.setState({value: this.state.value + 1});
-            this.setState({text: "Fizz"});
+            this.setState({text: "Fizz!"});
         } else if ( ( this.state.value % 5 ) == 0 ) {
             this.setState({value: this.state.value + 1});
-            this.setState({text: "Buzz"});
+            this.setState({text: "Buzz!"});
         } else {
             this.setState({value: this.state.value + 1});
             this.setState({text: this.state.value});
         }
-        console.log("Value: " + this.state.value);
-        console.log("Text: " + this.state.text);
     },
     render:function(){
         return (
